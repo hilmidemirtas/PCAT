@@ -1,5 +1,15 @@
-const fn = function () {
-    console.log("func working");
-};
+const express = require("express");
+const app = express();
 
-fn()
+const path = require("path");
+
+app.use(express.static("public"));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "index/index.html"));
+});
+
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Sunucu ${port} portunda başlatıldı`);
+});
