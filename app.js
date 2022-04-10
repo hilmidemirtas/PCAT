@@ -23,9 +23,13 @@ app.use(express.json());
 
 const port = 3000;
 
-app.get('/', (req, res) => {
-    /* res.send('merhaba') */
-    res.render('index')
+app.get('/', async (req, res) => {
+
+const photos =  await Photo.find({})
+
+    res.render('index', {
+        photos
+    })
 });
 
 app.get('/about', (req, res) => {
