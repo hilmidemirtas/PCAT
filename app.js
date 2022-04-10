@@ -9,6 +9,8 @@ app.set("view engine", "ejs");
 
 //MIDDLEWARES
 app.use(express.static('public'));
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 
 //ROUTES
 
@@ -27,6 +29,12 @@ app.get('/about', (req, res) => {
 app.get('/add', (req, res) => {
     /* res.send('merhaba') */
     res.render('add')
+});
+
+//post metodu
+app.post('/photos', (req, res) => {
+  console.log(req.body);
+  res.redirect('/');
 });
 
 app.listen(port, () => {
