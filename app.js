@@ -1,8 +1,15 @@
 const express = require('express');
 const ejs = require('ejs');
 const path = require('path');
+const mongoose = require('mongoose');
+
+
+const Photo = require('./models/Photo');
 
 const app = express();
+
+//connect
+mongoose.connect('mongodb://localhost/pcat-veritabani');
 
 //Template Engine
 app.set("view engine", "ejs");
@@ -32,8 +39,8 @@ app.get('/add', (req, res) => {
 });
 
 //post metodu
-app.post('/photos', (req, res) => {
-  console.log(req.body);
+app.post('/photos', async (req, res) => {
+  await Photo.create(req.body);
   res.redirect('/');
 });
 

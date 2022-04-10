@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+/* const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 //connect
@@ -23,4 +23,4 @@ const Photo = mongoose.model('Photo', PhotoSchema);
 
 /* Photo.find({}, (err, data)=> {
     console.log(data);
-}); */
+}); */ */
