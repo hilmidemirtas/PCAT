@@ -37,6 +37,11 @@ app.get('/about', (req, res) => {
     res.render('about')
 });
 
+app.get('/photos/:id', (req, res) => {
+    /* res.send('merhaba') */
+    console.log(req.params.id)
+});
+
 app.get('/add', (req, res) => {
     /* res.send('merhaba') */
     res.render('add')
