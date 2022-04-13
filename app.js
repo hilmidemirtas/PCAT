@@ -37,9 +37,13 @@ app.get('/about', (req, res) => {
     res.render('about')
 });
 
-app.get('/photos/:id', (req, res) => {
+app.get('/photos/:id', async (req, res) => {
     /* res.send('merhaba') */
-    console.log(req.params.id)
+   /*  console.log(req.params.id) */
+   const photo = await Photo.findById(req.params.id)
+   res.render('photo', {
+       photo
+   })
 });
 
 app.get('/add', (req, res) => {
