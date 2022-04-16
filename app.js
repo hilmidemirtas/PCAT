@@ -1,6 +1,7 @@
 const express = require('express');
 const ejs = require('ejs');
 const path = require('path');
+const fs = require('fs');
 const mongoose = require('mongoose');
 const fileUpload = require('express-fileupload');
 
@@ -65,7 +66,7 @@ app.post('/photos', async (req, res) => {
         async () => {
             await Photo.create({
                 ...req.body,
-                image: '/uploads' +  uploadeImage.name;
+                image: '/uploads' +  uploadeImage.name
             });
             res.redirect('/')
           }
