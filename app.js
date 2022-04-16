@@ -26,7 +26,7 @@ app.use(fileUpload()); // default options
 const port = 3000;
 
 app.get('/', async (req, res) => {
-  const photos = await Photo.find({});
+  const photos = await Photo.find({}).sort('-dateCreated');
 
   res.render('index', {
     photos,
