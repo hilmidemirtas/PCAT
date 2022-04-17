@@ -21,6 +21,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(fileUpload()); // default options
 
+
+
 //ROUTES
 
 const port = 3000;
@@ -73,6 +75,13 @@ app.post('/photos', async (req, res) => {
       image: '/uploads' + uploadeImage.name,
     });
     res.redirect('/');
+  });
+});
+
+app.get('/photos/edit/:id', async (req, res) => {
+  const photo = await  Photo.findOne({_id: req.params.id});
+  res.render('edit', {
+    photo
   });
 });
 
