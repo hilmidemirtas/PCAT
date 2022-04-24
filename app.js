@@ -96,6 +96,7 @@ app.put('/photos/:id', async (req, res) => {
   res.redirect(`/photos/${req.params.id}`)
 });
 
+//Port Operator
 app.listen(port, () => {
   console.log(`Sunucu ${port} portunda...`);
 });
