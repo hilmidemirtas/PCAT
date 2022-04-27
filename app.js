@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const fileUpload = require('express-fileupload');
 const methodOverride = require('method-override')
 
-const Photo = require('./models/Photo');
+const Photo = require('./models/Photo'); //photo schema include
 
 const app = express();
 
