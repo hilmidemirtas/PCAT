@@ -1,7 +1,7 @@
 //Avout Page
 
 exports.getAboutPage = (req, res) => {
-    /* res.send('merhaba') */
+   
     res.render('about');
   };
 
