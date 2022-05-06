@@ -1,4 +1,4 @@
-const Photo = require ('../models/Photo')
+const Photo = require ('../models/Photo'); //İnclude Photo here
 
 
 exports.getAllPhotos = async (req, res) => {
