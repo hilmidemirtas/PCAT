@@ -49,7 +49,7 @@ exports.getAllPhotos = async (req, res) => {
     photo.save()
     res.redirect(`/photos/${req.params.id}`)
   };
-
+   //Delete Photos 
   exports.deletePhoto = async (req, res) => {
     const photo = await Photo.findOne({_id:req.params.id});
     let deletedImage = __dirname + '/public' + photo.image;
