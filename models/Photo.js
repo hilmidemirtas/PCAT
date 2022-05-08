@@ -8,7 +8,7 @@ const PhotoSchema = new Schema({
     image: String,
     dateCreated: {
         type: Date,
-        default: Date.now
+        default: Date.now  //Default
     }
   });
 
