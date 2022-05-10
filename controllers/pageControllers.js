@@ -14,7 +14,7 @@ exports.getAddPage = (req, res) => {
 
 
 //Edit page
-  exports.getEditPage =  async (req, res) => {
+  exports.getEditPage =  async (req, res) => {  //async 
     const photo = await  Photo.findOne({_id: req.params.id});
     res.render('edit', {
       photo
