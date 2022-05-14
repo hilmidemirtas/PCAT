@@ -23,7 +23,7 @@ exports.getAllPhotos = async (req, res) => {
     /* await Photo.create(req.body);
     res.redirect('/'); */
   
-    const uploadDir = 'public/uploads';
+    const uploadDir = 'public/uploads';  //Create file
   
     if (!fs.existsSync(uploadDir)) {
       fs.mkdirSync(uploadDir);
