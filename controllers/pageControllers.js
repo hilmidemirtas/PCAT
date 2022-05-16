@@ -8,7 +8,7 @@ exports.getAboutPage = (req, res) => {
 //Add Page
 
 exports.getAddPage = (req, res) => {
-    /* res.send('merhaba') */
+    
     res.render('add');
   };
 
