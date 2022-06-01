@@ -8,12 +8,12 @@ const PhotoSchema = new Schema({
     image: String,
     dateCreated: {
         type: Date,
-        default: Date.now
+        default: Date.now  //Default
     }
   });
 
   const Photo = mongoose.model('Photo', PhotoSchema);
 
-  module.exports = Photo;
+  module.exports = Photo; //Export file 
   
 

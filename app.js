@@ -1,5 +1,10 @@
 const express = require('express');
 const ejs = require('ejs');
+<<<<<<< HEAD
+=======
+const path = require('path');  //path ?
+const fs = require('fs');
+>>>>>>> refs/remotes/origin/main
 const mongoose = require('mongoose');
 const fileUpload = require('express-fileupload');
 const methodOverride = require('method-override');

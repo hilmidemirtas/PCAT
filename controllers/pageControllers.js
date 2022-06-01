@@ -2,18 +2,20 @@ const Photo = require('../models/Photo');
 
 
 exports.getAboutPage = (req, res) => {
-    /* res.send('merhaba') */
+   
     res.render('about');
   };
 
-
+//Add Page
 
 exports.getAddPage = (req, res) => {
-    /* res.send('merhaba') */
+    
     res.render('add');
   };
 
-  exports.getEditPage =  async (req, res) => {
+
+//Edit page
+  exports.getEditPage =  async (req, res) => {  //async 
     const photo = await  Photo.findOne({_id: req.params.id});
     res.render('edit', {
       photo

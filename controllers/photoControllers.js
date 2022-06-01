@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 const Photo = require ('../models/Photo');
 const fs = require('fs');
+=======
+const Photo = require ('../models/Photo'); //İnclude Photo here
+>>>>>>> refs/remotes/origin/main
 
 
 exports.getAllPhotos = async (req, res) => {
@@ -24,7 +28,7 @@ exports.getAllPhotos = async (req, res) => {
     /* await Photo.create(req.body);
     res.redirect('/'); */
   
-    const uploadDir = 'public/uploads';
+    const uploadDir = 'public/uploads';  //Create file
   
     if (!fs.existsSync(uploadDir)) {
       fs.mkdirSync(uploadDir);
@@ -50,7 +54,7 @@ exports.getAllPhotos = async (req, res) => {
     photo.save()
     res.redirect(`/photos/${req.params.id}`)
   };
-
+   //Delete Photos 
   exports.deletePhoto = async (req, res) => {
     const photo = await Photo.findOne({_id:req.params.id});
     let deletedImage = __dirname + '/../public' + photo.image;
