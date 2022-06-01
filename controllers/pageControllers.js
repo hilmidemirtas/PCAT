@@ -1,3 +1,6 @@
+const Photo = require('../models/Photo');
+
+
 exports.getAboutPage = (req, res) => {
     /* res.send('merhaba') */
     res.render('about');

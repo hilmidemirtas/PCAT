@@ -1,12 +1,8 @@
 const express = require('express');
 const ejs = require('ejs');
-const path = require('path');
-const fs = require('fs');
 const mongoose = require('mongoose');
 const fileUpload = require('express-fileupload');
-const methodOverride = require('method-override')
-
-const Photo = require('./models/Photo'); //photo schema include
+const methodOverride = require('method-override');
 const photoController = require('./controllers/photoControllers');
 const pageController = require('./controllers/pageControllers');
 
